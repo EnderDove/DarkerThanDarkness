@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  _characterSprite: {fileID: 1072104726}
 --- !u!1 &1079603652
 GameObject:
   m_ObjectHideFlags: 0

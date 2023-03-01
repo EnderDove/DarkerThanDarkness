@@ -7,6 +7,8 @@ public class Walk : MonoBehaviour
     [SerializeField] private float _speed;
     private Vector3 _input;
 
+    [SerializeField] private SpriteRenderer _characterSprite;
+
     private Rigidbody2D _rigidbody;
     // Start is called before the first frame update
     private void Start()
@@ -23,5 +25,10 @@ public class Walk : MonoBehaviour
     {
         _input = new Vector2(Input.GetAxis("Horizontal"), 0);
         transform.position += _input * _speed * Time.deltaTime;
+
+        if (_input.x != 0)
+        {
+            _characterSprite.flipX = _input.x > 0 ? false : true;
+        }
     }
 }
