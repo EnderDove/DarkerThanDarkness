@@ -21,7 +21,7 @@ public class Walk : MonoBehaviour
     {
         Move();
     }
-    private void Move()
+    private void Move() // Walk
     {
         _input = new Vector2(Input.GetAxis("Horizontal"), 0);
         transform.position += _input * _speed * Time.deltaTime;
@@ -32,3 +32,4 @@ public class Walk : MonoBehaviour
         }
     }
 }
+
